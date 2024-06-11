@@ -108,7 +108,6 @@ def fetch_matches(soup, match_id):
 def fetch_maps(soup, match_id):
     """Scrape and return data about maps."""
     maps_names = []
-    map_ids = []
     scores_team_1 = []
     scores_team_2 = []
 
@@ -174,7 +173,7 @@ def save_to_csv(data, filename):
 def main():
     """Main function to orchestrate the scraping and saving of data."""
     page_urls = [
-        f"http://www.dust2.us/matches/{i}/b8-vs-enterprise"
+        f"https://www.dust2.us/matches/{i}/b8-vs-enterprise"
         for i in range(SCRAPE_FROM, SCRAPE_TO)
     ]
     user_agents = load_user_agents()
